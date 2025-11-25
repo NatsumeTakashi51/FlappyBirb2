@@ -1,0 +1,178 @@
+body {
+  font-family: monospace;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+
+  background-image: url("media/background1.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+}
+
+.footer-navbar {
+  /* Glassmorphism effect */
+  background: rgba(0, 123, 255, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  color: white; /* White text color */
+  text-align: center; /* Center the text */
+  padding: 10px 0; /* Some padding around the text */
+  width: 100%; /* Make the footer span the entire width */
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10%;
+  object-fit: cover;
+  border: 5px solid #007bff;
+  animation: colorChange 6s ease infinite;
+  margin-top: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@keyframes colorChange {
+  0% {
+    border-color: #49a2cb;
+  }
+  33% {
+    border-color: #978cf2;
+  }
+  66% {
+    border-color: #f8f0ff;
+  }
+  100% {
+    border-color: #49a2cb;
+  }
+}
+
+.profile-img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 30px rgba(0, 123, 255, 0.7);
+}
+
+.section-title {
+  color: #007bff;
+  margin-bottom: 30px;
+}
+
+.text-fade-in {
+  opacity: 0;
+  animation: fadeIn 3s forwards;
+}
+
+.text-highlight {
+  color: #fff44f;
+  text-shadow: 2px 2px 0px green;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 110%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Teks muncul dari bawah */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-about {
+  font-size: 18px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.8);
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 3%;
+
+  /* Glassmorphism effect */
+  background: rgba(0, 123, 255, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Masonry container */
+.masonry-container {
+  text-align: center;
+  column-count: 2;
+  column-gap: 1rem;
+  padding: 2rem;
+}
+
+.masonry-item {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 1rem;
+  border: 5px solid #007bff;
+  animation: colorChange 6s ease infinite;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.masonry-item:hover {
+  transform: scale(1.1);
+  background: rgba(0, 123, 255, 0.5);
+  box-shadow: 0px 0px 30px rgba(0, 123, 255, 1);
+}
+
+.download-button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.responsive-button {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+/* HERE ARE CODE FOR ADJUSTING CONTENTS BASED ON SCREEN SIZE */
+/* Make responsive adjustments for the masonry layout */
+/* For small screens (mobile) */
+@media (max-width: 575.98px) {
+  body,
+  .project-about {
+    font-size: 10px;
+  }
+
+  .masonry-item {
+    border: 3px solid #007bff;
+  }
+
+  .profile-img {
+    height: 80px;
+    width: 80px;
+
+    border: 3px solid #007bff;
+  }
+}
+
+/* For medium screens and up (tablets and larger) */
+@media (min-width: 576px) {
+  body,
+  .project-about {
+    font-size: 13px;
+  }
+}
+
+/* For large screens and up (desktop) */
+@media (min-width: 992px) {
+  body {
+    font-size: 14px;
+  }
+
+  .project-about {
+    font-size: 20px;
+  }
+}
