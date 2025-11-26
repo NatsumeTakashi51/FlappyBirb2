@@ -137,6 +137,13 @@ body {
   margin-right: 10px;
 }
 
+.download-text {
+  font-size: 28px;
+  margin-left: 10px;
+  margin-bottom: 30px;
+  padding-top: 20px;
+}
+
 /* HERE ARE CODE FOR ADJUSTING CONTENTS BASED ON SCREEN SIZE */
 /* Make responsive adjustments for the masonry layout */
 /* For small screens (mobile) */
@@ -152,6 +159,10 @@ body {
 
   .masonry-item:hover {
     transform: scale(1.35);
+  }
+
+  .download-text {
+    font-size: 22px;
   }
 
   .profile-img {
